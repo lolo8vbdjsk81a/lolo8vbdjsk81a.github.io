@@ -1,0 +1,109 @@
+<!-- File: index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="index.css" />
+        <!-- TODO 1: Add a favicon and a title -->
+        <link rel="icon" type="image/x-icon" href="./assets/icon.ico" />
+        <title>COMP 4900 Fall 2025</title>
+    </head>
+    <body>
+        <nav>
+            <!-- TODO 2: Add an logo and a name -->
+            <a href="./" id="logo">
+                <img src="./assets/icon.ico" />
+                LO, Ming Hin
+            </a>
+
+            <button id="anchor-list-trigger" onclick="toggleAnchorList()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentcolor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M 3 6 h 18 M 3 12 h 18 M 3 18 h 18" />
+                </svg>
+            </button>
+
+            <!-- TODO 3: Add the URL to your GitHub Pages repository -->
+            <ul id="anchor-list">
+                <li>
+                  <a href="https://github.com/lolo8vbdjsk81a/lolo8vbdjsk81a.github.io">
+                    GitHub
+                  </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="section-container">
+            <section id="hero">
+                <!-- TODO 4: Assign an h1 heading and a short description about you -->
+                <!-- TODO 4: Replace the 2 <span>...</span> tags with 2 appropriate tags -->
+                <div>
+                    <h1>Hello, I'm Leo</h1>
+                    <p>Undergraduate in BEng Computer Science (Year 2)</p>
+                </div>
+                <!-- TODO 4: Add an avatar -->
+                <img src="./assets/avatar.png" id="avatar" />
+            </section>
+
+            <hr />
+
+            <section id="about">
+                <h2>About</h2>
+                <!-- TODO 5: A short paragraph about you -->
+                <p>I’m an undergraduate BEng Computer Science student (Year 2) at HKUST.</p>
+                <p>
+                <b>Note:</b>
+                The logos used in the Skills section are taken from <a href="https://simpleicons.org/" target="_blank" rel="noopener noreferrer"> simpleicons.org</a>, which provides icons under permissive licenses.
+                The favicon and avatar on this site are original drawings created by me. All rights reserved.
+                You may not reuse them or include them in AI training datasets without my permission.
+                </p>
+            </section>
+
+            <hr />
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <!-- TODO 6: Elaborate more skills using HTML elements -->
+                <div id="skill-set">
+                  <div class="skill">
+                      <img src="./assets/html5.svg" alt="HTML logo">
+                      <span>HTML</span>
+                  </div>
+                  <div class="skill">
+                      <img src="./assets/css.svg" alt="CSS logo">
+                      <span>CSS</span>
+                  </div>
+                  <div class="skill">
+                      <img src="./assets/python.svg" alt="Python logo">
+                      <span>Python</span>
+                  </div>
+                  <div class="skill">
+                      <img src="./assets/vim.svg" alt="Vim logo">
+                      <span>Vim</span>
+                  </div>
+                </div>
+            </section>
+
+            <hr />
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <!-- TODO 7: Put your HKUST email without the domain -->
+                <p>mhloag</p>
+            </section>
+        </div>
+
+        <footer>An assessment for COMP 4900 (Fall 2025)</footer>
+
+        <script>
+            function toggleAnchorList() {
+                const anchor_list = document.getElementById("anchor-list");
+                if (window.getComputedStyle(anchor_list).getPropertyValue("--show-anchor-list") == "none") {
+                    anchor_list.style.setProperty("--show-anchor-list", "block");
+                }
+                else {
+                    anchor_list.style.setProperty("--show-anchor-list", "none");
+                }
+            }
+        </script>
+    </body>
+</html>
